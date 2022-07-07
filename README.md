@@ -1,33 +1,41 @@
-# Getting Started with Create React App
+# Проект: React-приложение поиска книг с помощью Google Books API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Функционал проекта:
 
-## Available Scripts
+    - Есть текстовое поле и кнопка поиска. По введенной пользователем подстроке производится поиск книг. Триггером к поиску является либо нажатие Enter (когда текстовое поле в фокусе), либо нажатие кнопки поиска.
+- Фильтрация по категориям. Ниже текстового поля располагается селект с категориями: all, art, biography, computers, history, medical, poetry. Если выбрано "all" (выбрано изначально), то поиск производится по всем категориям.
+- Сортировка. Рядом с селектом категорий находится селект с вариантами сортировки: relevance (выбран изначально), newest. 
+- Найденные книги отображаются карточками, каждая из которых состоит из изображения обложки книги, названия книги, названия категории и имен авторов. Если для книги приходит несколько категорий, то отображается только первая. Авторы отображаются все. Если не приходит какой-либо части данных, то вместо нее просто пустое место.
+- Над блоком с карточками отображается количество найденных по запросу книг.
+- Пагинация реализована по принципу 'load more'. Ниже блока с карточками находится кнопка 'Load more', по клику на нее к уже загруженным книгам подгружаются еще. Шаг пагинации - 30.
+- При клике на карточку происходит переход на детальную страницу книги, на которой выводятся ее данные: изображение обложки, название, все категории, все авторы, описание.
+- 
+# Начало работы с приложением Create React
+## Доступные сценарии
 
-In the project directory, you can run:
+В каталоге проекта вы можете запустить:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Запускает приложение в режиме разработки.\
+Открыть [http://localhost:3000 ](http://localhost:3000 ), чтобы просмотреть его в вашем браузере.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Страница перезагрузится, когда вы внесете изменения.\
+Вы также можете увидеть любые ошибки lint в консоли.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Запускает тестовый прогон в режиме интерактивного просмотра.\
+См. раздел о [выполнении тестов](https://facebook.github.io/create-react-app/docs/running-tests ) для получения дополнительной информации.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Создает приложение для производства в папке `build`.\
+Он правильно связывает React в рабочем режиме и оптимизирует сборку для достижения наилучшей производительности.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Сборка сокращена, а имена файлов содержат хэши.\
+Ваше приложение готово к развертыванию!
+Его можно разворачивать на хосте.
 
 
 
